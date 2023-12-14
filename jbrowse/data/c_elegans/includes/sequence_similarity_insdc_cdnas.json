@@ -1,0 +1,27 @@
+{
+   "tracks" : [
+      {
+         "unsafeMouseover" : true,
+         "maxExportSpan" : 50000000,
+         "compress" : 1,
+         "glyph" : "JBrowse/View/FeatureGlyph/Segments",
+         "label" : "INSDC nematode cDNAs",
+         "category" : "Sequence Similarity/Nucleotide",
+         "metadata" : {
+            "shortInfo" : "cDNAs from this species from INSDC that have been aligned to the genome using STAR."
+         },
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "subParts" : "match_part",
+         "style" : {
+            "className" : "feature",
+            "height" : 4,
+            "color" : "gray"
+         },
+         "key" : "INSDC nematode cDNAs",
+         "urlTemplate" : "../tracks/INSDC nematode cDNAs/{refseq}/trackData.jsonz",
+         "unsafePopup" : true,
+         "trackType" : "CanvasFeatures",
+         "type" : "CanvasFeatures"
+      }
+   ]
+}

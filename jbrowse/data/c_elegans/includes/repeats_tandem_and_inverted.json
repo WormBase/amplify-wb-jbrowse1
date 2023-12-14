@@ -1,0 +1,25 @@
+{
+   "tracks" : [
+      {
+         "unsafeMouseover" : true,
+         "label" : "Tandem and Inverted Repeats",
+         "maxExportSpan" : 50000000,
+         "compress" : 1,
+         "category" : "Genome Structure/Repeats",
+         "key" : "Tandem and Inverted Repeats",
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "metadata" : {
+            "shortInfo" : "Exact tandem and inverted repetitive elements."
+         },
+         "style" : {
+            "className" : "feature",
+            "color" : "bisque",
+            "height" : 4
+         },
+         "trackType" : "CanvasFeatures",
+         "unsafePopup" : true,
+         "urlTemplate" : "../tracks/Tandem and Inverted Repeats/{refseq}/trackData.jsonz",
+         "type" : "CanvasFeatures"
+      }
+   ]
+}

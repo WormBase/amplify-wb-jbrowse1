@@ -1,0 +1,32 @@
+{
+   "tracks" : [
+      {
+         "label" : "genBlastG CDS predictions",
+         "type" : "CanvasFeatures",
+         "trackType" : "CanvasFeatures",
+         "style" : {
+            "height" : 7,
+            "className" : "feature"
+         },
+         "onClick" : {
+            "label" : "Link to related gene in C. elegans",
+            "action" : "iframeDialog",
+            "title" : "Feature in WormBase",
+            "url" : "{genblastgURL}"
+         },
+         "metadata" : {
+            "shortInfo" : "Data from <a href='http://www.wormbase.org/resources/paper/WBPaper00040677#0--10'>'genBlastG: using BLAST searches to build homologous gene models'</a>."
+         },
+         "category" : "Genes/Ab-initio predictions",
+         "compress" : 1,
+         "maxExportSpan" : 50000000,
+         "glyph" : "JBrowse/View/FeatureGlyph/Segments",
+         "unsafeMouseover" : true,
+         "unsafePopup" : true,
+         "urlTemplate" : "../tracks/genBlastG CDS predictions/{refseq}/trackData.jsonz",
+         "key" : "genBlastG CDS predictions",
+         "subParts" : "CDS",
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList"
+      }
+   ]
+}

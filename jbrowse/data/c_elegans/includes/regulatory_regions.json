@@ -1,0 +1,30 @@
+{
+   "tracks" : [
+      {
+         "category" : "Sequence Features/Binding Sites & Regions",
+         "label" : "Regulatory regions",
+         "compress" : 1,
+         "maxExportSpan" : 50000000,
+         "unsafeMouseover" : true,
+         "type" : "CanvasFeatures",
+         "trackType" : "CanvasFeatures",
+         "unsafePopup" : true,
+         "urlTemplate" : "../tracks/Regulatory regions/{refseq}/trackData.jsonz",
+         "key" : "Regulatory regions",
+         "onClick" : {
+            "label" : "Feature in WormBase",
+            "url" : "{featureURL}",
+            "title" : "Feature in WormBase",
+            "action" : "iframeDialog"
+         },
+         "metadata" : {
+            "shortInfo" : "Assorted or unspecified regulatory elements with experimental evidence."
+         },
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "style" : {
+            "className" : "feature",
+            "color" : "green"
+         }
+      }
+   ]
+}
