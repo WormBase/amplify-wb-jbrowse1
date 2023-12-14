@@ -1,0 +1,35 @@
+{
+   "tracks" : [
+      {
+         "unsafePopup" : true,
+         "urlTemplate" : "../tracks/D. melanogaster proteins/{refseq}/trackData.jsonz",
+         "subParts" : "match_part",
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "key" : "D. melanogaster proteins",
+         "glyph" : "JBrowse/View/FeatureGlyph/Segments",
+         "maxExportSpan" : 50000000,
+         "compress" : 1,
+         "unsafeMouseover" : true,
+         "category" : "Sequence Similarity/Proteins",
+         "trackType" : "CanvasFeatures",
+         "style" : {
+            "showLabels" : false,
+            "label" : true,
+            "className" : "feature",
+            "height" : 5,
+            "color" : "orange"
+         },
+         "onClick" : {
+            "action" : "iframeDialog",
+            "url" : "{ssproteinURL}",
+            "title" : "function(track,f) {var clone = f.get('clone'); return clone;}",
+            "label" : "function(track,f) {var clone = f.get('clone'); return clone;}"
+         },
+         "metadata" : {
+            "shortInfo" : "Matches to Drosophila melanogaster proteins from FlyBase, aligned with BLASTX (nucleotide to protein, via six-frame translation)."
+         },
+         "type" : "CanvasFeatures",
+         "label" : "D. melanogaster proteins"
+      }
+   ]
+}

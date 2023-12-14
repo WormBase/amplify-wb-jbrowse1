@@ -1,0 +1,35 @@
+{
+   "tracks" : [
+      {
+         "key" : "C. briggsae proteins",
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "subParts" : "match_part",
+         "unsafePopup" : true,
+         "urlTemplate" : "../tracks/C. briggsae proteins/{refseq}/trackData.jsonz",
+         "category" : "Sequence Similarity/Proteins",
+         "unsafeMouseover" : true,
+         "maxExportSpan" : 50000000,
+         "compress" : 1,
+         "glyph" : "JBrowse/View/FeatureGlyph/Segments",
+         "type" : "CanvasFeatures",
+         "onClick" : {
+            "label" : "function(track,f) {var clone = f.get('clone'); return clone;}",
+            "action" : "iframeDialog",
+            "title" : "function(track,f) {var clone = f.get('clone'); return clone;}",
+            "url" : "{ssproteinURL}"
+         },
+         "style" : {
+            "showLabels" : false,
+            "className" : "feature",
+            "label" : true,
+            "color" : "orange",
+            "height" : 5
+         },
+         "metadata" : {
+            "shortInfo" : "Matches to WormBase C. briggsae proteins, aligned with BLASTX (nucleotide to protein, via six-frame translation)."
+         },
+         "trackType" : "CanvasFeatures",
+         "label" : "C. briggsae proteins"
+      }
+   ]
+}
