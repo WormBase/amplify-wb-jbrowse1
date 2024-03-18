@@ -1,0 +1,22 @@
+{
+   "tracks" : [
+      {
+         "unsafePopup" : true,
+         "urlTemplate" : "../tracks/Prediction: Twinscan/{refseq}/trackData.jsonz",
+         "trackType" : "CanvasFeatures",
+         "style" : {
+            "color" : "palevioletred",
+            "className" : "feature",
+            "label" : false
+         },
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "key" : "Prediction: Twinscan",
+         "type" : "CanvasFeatures",
+         "maxExportSpan" : 50000000,
+         "compress" : 1,
+         "label" : "Prediction: Twinscan",
+         "unsafeMouseover" : true,
+         "category" : "Genes/Ab-initio predictions"
+      }
+   ]
+}

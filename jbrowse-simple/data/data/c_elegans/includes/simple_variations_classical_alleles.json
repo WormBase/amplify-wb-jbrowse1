@@ -1,0 +1,34 @@
+{
+   "tracks" : [
+      {
+         "category" : "Alleles, Variations, RNAi",
+         "maxExportSpan" : 50000000,
+         "glyph" : "{variationGlyph}",
+         "compress" : 1,
+         "label" : "Classical_alleles",
+         "unsafeMouseover" : true,
+         "type" : "CanvasFeatures",
+         "unsafePopup" : true,
+         "urlTemplate" : "../tracks/Classical_alleles/{refseq}/trackData.jsonz",
+         "trackType" : "CanvasFeatures",
+         "metadata" : {
+            "shortInfo" : "This track shows classical alleles comprised of insertions, deletions, substitutions and complex changes. These alleles were typically generated during forward genetic screens. Boxes represent deletions or substitutions; and white triangles represent insertions. Color signifies the severity of impact predicted by Ensembl's Variant Effect Predictor. 'HIGH' impacts are red, 'MEDIUM' are yellow, 'LOW' are cyan (light blue), and 'MODIFIER' are purple. This is the same color scheme as is used at the Alliance of Genome Resources."
+         },
+         "onClick" : {
+            "label" : "{variationsBalloon}",
+            "action" : "iframeDialog",
+            "url" : "{variationURL}",
+            "title" : "Feature in WormBase"
+         },
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "style" : {
+            "className" : "feature",
+            "height" : "function(feature) {var rflp = feature.get('rflp'); var status = feature.get('status'); if (rflp && status == 'Confirmed') {return 14;} else {return 8;} }",
+            "color" : "{agrVariationColor}",
+            "strandArrow" : false,
+            "borderColor" : "black"
+         },
+         "key" : "Classical alleles"
+      }
+   ]
+}
