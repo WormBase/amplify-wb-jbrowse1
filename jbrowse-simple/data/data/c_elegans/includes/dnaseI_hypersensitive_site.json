@@ -1,0 +1,30 @@
+{
+   "tracks" : [
+      {
+         "metadata" : {
+            "shortInfo" : "DNase I hypersensitive sites from the 2009 paper by Shi et al."
+         },
+         "onClick" : {
+            "url" : "/species/c_elegans/feature/{name}",
+            "title" : "Feature in WormBase",
+            "action" : "iframeDialog",
+            "label" : "Feature in WormBase"
+         },
+         "style" : {
+            "color" : "green",
+            "className" : "feature"
+         },
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "key" : "DNaseI hypersensitive site",
+         "unsafePopup" : true,
+         "urlTemplate" : "../tracks/DNaseI hypersensitive site/{refseq}/trackData.jsonz",
+         "trackType" : "CanvasFeatures",
+         "type" : "CanvasFeatures",
+         "unsafeMouseover" : true,
+         "compress" : 1,
+         "maxExportSpan" : 50000000,
+         "label" : "DNaseI hypersensitive site",
+         "category" : "Sequence Features/Signals & Motifs"
+      }
+   ]
+}

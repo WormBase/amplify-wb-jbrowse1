@@ -1,0 +1,31 @@
+{
+   "tracks" : [
+      {
+         "unsafeMouseover" : true,
+         "compress" : 1,
+         "maxExportSpan" : 50000000,
+         "label" : "Links and Superlinks",
+         "category" : "Genome Structure/Assembly & Curation",
+         "metadata" : {
+            "shortInfo" : "This track shows the location and coordinates of contigs created during the assembly of the C. elegans genome."
+         },
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "style" : {
+            "className" : "feature",
+            "height" : 4,
+            "color" : "black"
+         },
+         "onClick" : {
+            "label" : "Feature in WormBase",
+            "title" : "Feature in WormBase",
+            "url" : "{expressionProfileURL}",
+            "action" : "iframeDialog"
+         },
+         "key" : "Links and Superlinks",
+         "urlTemplate" : "../tracks/Links and Superlinks/{refseq}/trackData.jsonz",
+         "unsafePopup" : true,
+         "trackType" : "CanvasFeatures",
+         "type" : "CanvasFeatures"
+      }
+   ]
+}

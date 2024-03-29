@@ -1,0 +1,30 @@
+{
+   "tracks" : [
+      {
+         "type" : "CanvasFeatures",
+         "key" : "Promoter regions",
+         "onClick" : {
+            "label" : "Feature in WormBase",
+            "action" : "iframeDialog",
+            "url" : "{featureURL}",
+            "title" : "Feature in WormBase"
+         },
+         "metadata" : {
+            "shortInfo" : "Regions within which there is experimental evidence for a promoter."
+         },
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "style" : {
+            "className" : "feature",
+            "color" : "green"
+         },
+         "trackType" : "CanvasFeatures",
+         "urlTemplate" : "../tracks/Promoter regions/{refseq}/trackData.jsonz",
+         "unsafePopup" : true,
+         "category" : "Sequence Features/Binding Sites & Regions",
+         "unsafeMouseover" : true,
+         "label" : "Promoter regions",
+         "maxExportSpan" : 50000000,
+         "compress" : 1
+      }
+   ]
+}

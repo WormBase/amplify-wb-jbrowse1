@@ -1,0 +1,25 @@
+{
+   "tracks" : [
+      {
+         "key" : "Repeat Region (RepeatMasker)",
+         "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+         "metadata" : {
+            "shortInfo" : "Repetitive regions identified by RepeatMasker."
+         },
+         "style" : {
+            "className" : "feature",
+            "height" : 4,
+            "color" : "bisque"
+         },
+         "trackType" : "CanvasFeatures",
+         "unsafePopup" : true,
+         "urlTemplate" : "../tracks/Repeat Region (RepeatMasker)/{refseq}/trackData.jsonz",
+         "type" : "CanvasFeatures",
+         "unsafeMouseover" : true,
+         "label" : "Repeat Region (RepeatMasker)",
+         "compress" : 1,
+         "maxExportSpan" : 50000000,
+         "category" : "Genome Structure/Repeats"
+      }
+   ]
+}
