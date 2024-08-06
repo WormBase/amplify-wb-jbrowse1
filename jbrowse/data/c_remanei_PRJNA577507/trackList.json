@@ -1,1 +1,224 @@
-{"formatVersion":1,"include":["../functions.conf"],"dataset_id":"c_remanei_PRJNA577507","names":{"url":"https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS292/c_remanei_PRJNA577507/names/","type":"Hash"},"plugins":{"FeatureSequence":{"location":"./plugins/FeatureSequence"}},"tracks":[{"trackType":"CanvasFeatures","urlTemplate":"https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS292/c_remanei_PRJNA577507/tracks/Curated_Genes/{refseq}/trackData.jsonz","onClick":{"title":"Navigate to Gene Page at:","action":"contentDialog","content":"function(track,f,div) { var curie = f.get('curie'); var name = f.get('name'); var label = (name!=''?name:label);var allURL=''; var wbURL=''; if (curie != '') {allURL = '<li><a href=\"https://alliancegenome.org/gene/'+curie+'\" target=\"_blank\">Alliance of Genome Resources</a><br>';} if (name !='') {wbURL = '<li><a href=\"/get?name='+name+';class=Gene\" target=\"_blank\">WormBase</a>'; } return '<p>Links for '+label+' open in a new tab:</p><ul>'+allURL+wbURL+'</ul>'; }"},"style":{"label":"{geneLabel}","color":"{geneColor}","height":"function(f) {var type = f.get('type'); if (type == 'CDS') {return 10;} return 6;  }","className":"feature"},"glyph":"{geneGlyph}","menuTemplate":[{"label":"View details"},{"label":"Zoom to this gene"},{"label":"Highlight this gene"},{"action":"contentDialog","content":"function(track,feature){return track.browser.plugins.FeatureSequence.callFxn(track, feature); }","label":"View Sequence","iconClass":"dijitIconDatabase"}],"maxExportSpan":50000000,"unsafeMouseover":true,"label":"Curated_Genes","maxHeight":3000,"key":"Curated Genes","category":"Genes/Curated Genes","metadata":{"shortInfo":"Protein-coding gene structures result from the integration of a variety of prediction methods and data sources followed by manual review and revison by WormBase curators. tRNAs are predicted by tRNAscan, and other non-coding RNA transcripts are taken from a variety of literature sources. The purple and blue colors indicate transcripts on the forward and reverse strands respectively. Dark purple areas represent 5' and 3' UTRs of protein-coding transcripts, assigned automatically using the extents of overlapping ESTs and full-length cDNAs. The UTR predictions have not been reviewed by WormBase curators, and some are known to contain artifacts. Grey transcripts represent either non-coding transcripts of protein coding genes or transcripts of non-coding genes."},"type":"CanvasFeatures","unsafePopup":true,"compress":1,"storeClass":"JBrowse/Store/SeqFeature/NCList"},{"glyph":"ColorByCDS/View/FeatureGlyph/ProcessedTranscript","menuTemplate":[{"action":"contentDialog","iconClass":"dijitIconDatabase","content":"function(track,feature){return track.browser.plugins.FeatureSequence.callFxn(track, feature); }","label":"View Sequence"}],"urlTemplate":"https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS292/c_remanei_PRJNA577507/tracks/Curated Genes (protein coding)/{refseq}/trackData.jsonz","type":"CanvasFeatures","metadata":{"shortInfo":"This track shows protein coding gene transcripts with the CDS portions colored by frame usage. Note that the color coding corresponds to the same color coding in the 'reference sequence' track.  So that, for example, the light blue exons correspond to the the first translation frame in the reference sequence track.  NOTE THAT THIS FEATURE IS STILL IN BETA."},"category":"Genes/Curated Genes","key":"Protein-coding genes (frame usage)","storeClass":"JBrowse/Store/SeqFeature/NCList","unsafePopup":true,"compress":1,"label":"Protein-coding genes (frame usage)","unsafeMouseover":true,"maxHeight":2500},{"unsafeMouseover":true,"label":"Curated Genes (protein coding)","maxHeight":2500,"metadata":{"shortInfo":"A subset of the full Curated Genes set limited to protein-coding genes only. Only the CDS is represented. Full models (with UTRs) can be seen on the 'Curated Genes' track."},"type":"CanvasFeatures","key":"Curated Genes (protein coding)","category":"Genes/Curated Genes","storeClass":"JBrowse/Store/SeqFeature/NCList","unsafePopup":true,"compress":1,"trackType":"CanvasFeatures","urlTemplate":"https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS292/c_remanei_PRJNA577507/tracks/Curated Genes (protein coding)/{refseq}/trackData.jsonz","onClick":{"url":"{transcriptURL}","label":"Right/Control click for more options","title":"Feature in WormBase","action":"iframeDialog"},"style":{"label":"{geneLabel}","color":"{geneColor}","className":"feature"},"menuTemplate":[{"iconClass":"dijitIconDatabase","label":"View Sequence","content":"function(track,feature){return track.browser.plugins.FeatureSequence.callFxn(track, feature); }","action":"contentDialog"}],"maxExportSpan":50000000},{"style":{"height":4,"className":"feature","color":"bisque"},"maxExportSpan":50000000,"trackType":"CanvasFeatures","urlTemplate":"https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS292/c_remanei_PRJNA577507/tracks/Low complextity region (Dust)/{refseq}/trackData.jsonz","metadata":{"shortInfo":"Low-complexity regions identified by Dust."},"type":"CanvasFeatures","key":"Low complextity region (Dust)","category":"Genome Structure/Repeats","storeClass":"JBrowse/Store/SeqFeature/NCList","compress":1,"unsafePopup":true,"unsafeMouseover":true,"label":"Low complextity region (Dust)"},{"urlTemplate":"https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/static_tracks/modencode-bucket/jbrowse/data/c_remanei_PRJNA577507/seq/{refseq_dirpath}/{refseq}-","label":"DNA","codonStarts":"[ATG]","unsafeMouseover":true,"storeClass":"JBrowse/Store/Sequence/StaticChunked","unsafePopup":true,"compress":1,"type":"SequenceTrack","chunkSize":80000,"key":"Reference sequence (DNA)"},{"urlTemplate":null,"unsafeMouseover":true,"label":"SpCas9 NGG PAM sites","unsafePopup":true,"searchParams":{"revStrand":true,"expr":".GG","fwdStrand":true,"caseIgnore":true,"regex":true},"storeClass":"RegexSequenceSearch/Store/SeqFeature/RegexSearch","key":"SpCas9 NGG PAM sites","category":"Externally Sourced Resources/CRISPR predictions","style":{"color":"RebeccaPurple","height":5},"metadata":{"shortInfo":"Streptococcus pyogenes Cas9 PAM sites based on NGG motif. Computed on the fly at load time."},"type":"CanvasFeatures"},{"key":"SaCas9 NNGRRT PAM sites","style":{"height":5,"color":"DarkViolet"},"category":"Externally Sourced Resources/CRISPR predictions","metadata":{"shortInfo":"Staphylococcus aureus Cas9 PAM sites based on NNGRRT motif. Computed on the fly at load time."},"type":"CanvasFeatures","unsafePopup":true,"searchParams":{"fwdStrand":true,"caseIgnore":true,"regex":true,"expr":"..G[AG][AG]T","revStrand":true},"storeClass":"RegexSequenceSearch/Store/SeqFeature/RegexSearch","unsafeMouseover":true,"label":"SaCas9 NNGRRT PAM sites","urlTemplate":null},{"label":"Cas12a TTN PAM sites","unsafeMouseover":true,"urlTemplate":null,"type":"CanvasFeatures","metadata":{"shortInfo":"Cas12a (Cpf1) PAM sites based on TTN motif. Computed on the fly at load time."},"category":"Externally Sourced Resources/CRISPR predictions","style":{"height":5,"color":"Indigo"},"key":"Cas12a TTN PAM sites","storeClass":"RegexSequenceSearch/Store/SeqFeature/RegexSearch","searchParams":{"expr":"TT.","fwdStrand":true,"caseIgnore":true,"regex":true,"revStrand":true},"unsafePopup":true},{"style":{"color":"SlateBlue","height":5},"category":"Externally Sourced Resources/CRISPR predictions","key":"Cas12e TTCN PAM sites","type":"CanvasFeatures","metadata":{"shortInfo":"Cas12e (CasX) PAM sites based on TTCN motif. Computed on the fly at load time."},"unsafePopup":true,"storeClass":"RegexSequenceSearch/Store/SeqFeature/RegexSearch","searchParams":{"regex":true,"fwdStrand":true,"caseIgnore":true,"expr":"TTC.","revStrand":true},"label":"Cas12e TTCN PAM sites","unsafeMouseover":true,"urlTemplate":null}]}
+{
+  "formatVersion": 1,
+  "tracks": [
+    {
+      "glyph": "ColorByCDS/View/FeatureGlyph/ProcessedTranscript",
+      "type": "CanvasFeatures",
+      "unsafePopup": true,
+      "compress": 1,
+      "category": "Genes/Curated Genes",
+      "unsafeMouseover": true,
+      "urlTemplate": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS293/c_remanei_PRJNA577507/tracks/Curated Genes (protein coding)/{refseq}/trackData.jsonz",
+      "label": "Protein-coding genes (frame usage)",
+      "storeClass": "JBrowse/Store/SeqFeature/NCList",
+      "menuTemplate": [
+        {
+          "action": "contentDialog",
+          "iconClass": "dijitIconDatabase",
+          "label": "View Sequence",
+          "content": "function(track,feature){return track.browser.plugins.FeatureSequence.callFxn(track, feature); }"
+        }
+      ],
+      "maxHeight": 2500,
+      "key": "Protein-coding genes (frame usage)",
+      "metadata": {
+        "shortInfo": "This track shows protein coding gene transcripts with the CDS portions colored by frame usage. Note that the color coding corresponds to the same color coding in the 'reference sequence' track.  So that, for example, the light blue exons correspond to the the first translation frame in the reference sequence track.  NOTE THAT THIS FEATURE IS STILL IN BETA."
+      }
+    },
+    {
+      "type": "CanvasFeatures",
+      "trackType": "CanvasFeatures",
+      "label": "Curated Genes (protein coding)",
+      "style": {
+        "className": "feature",
+        "label": "{geneLabel}",
+        "color": "{geneColor}"
+      },
+      "maxExportSpan": 50000000,
+      "compress": 1,
+      "unsafePopup": true,
+      "urlTemplate": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS293/c_remanei_PRJNA577507/tracks/Curated Genes (protein coding)/{refseq}/trackData.jsonz",
+      "unsafeMouseover": true,
+      "category": "Genes/Curated Genes",
+      "maxHeight": 2500,
+      "storeClass": "JBrowse/Store/SeqFeature/NCList",
+      "menuTemplate": [
+        {
+          "label": "View Sequence",
+          "iconClass": "dijitIconDatabase",
+          "action": "contentDialog",
+          "content": "function(track,feature){return track.browser.plugins.FeatureSequence.callFxn(track, feature); }"
+        }
+      ],
+      "key": "Curated Genes (protein coding)",
+      "metadata": {
+        "shortInfo": "A subset of the full Curated Genes set limited to protein-coding genes only. Only the CDS is represented. Full models (with UTRs) can be seen on the 'Curated Genes' track."
+      },
+      "onClick": {
+        "title": "Feature in WormBase",
+        "action": "iframeDialog",
+        "label": "Right/Control click for more options",
+        "url": "{transcriptURL}"
+      }
+    },
+    {
+      "metadata": { "shortInfo": "Low-complexity regions identified by Dust." },
+      "key": "Low complextity region (Dust)",
+      "storeClass": "JBrowse/Store/SeqFeature/NCList",
+      "maxExportSpan": 50000000,
+      "style": { "height": 4, "className": "feature", "color": "bisque" },
+      "label": "Low complextity region (Dust)",
+      "trackType": "CanvasFeatures",
+      "unsafeMouseover": true,
+      "category": "Genome Structure/Repeats",
+      "urlTemplate": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS293/c_remanei_PRJNA577507/tracks/Low complextity region (Dust)/{refseq}/trackData.jsonz",
+      "compress": 1,
+      "unsafePopup": true,
+      "type": "CanvasFeatures"
+    },
+    {
+      "storeClass": "JBrowse/Store/Sequence/StaticChunked",
+      "codonStarts": "[ATG]",
+      "type": "SequenceTrack",
+      "compress": 1,
+      "unsafePopup": true,
+      "urlTemplate": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/static_tracks/modencode-bucket/jbrowse/data/c_remanei_PRJNA577507/seq/{refseq_dirpath}/{refseq}-",
+      "unsafeMouseover": true,
+      "chunkSize": 80000,
+      "key": "Reference sequence (DNA)",
+      "label": "DNA"
+    },
+    {
+      "style": {
+        "color": "{geneColor}",
+        "label": "{geneLabel}",
+        "className": "feature",
+        "height": "function(f) {var type = f.get('type'); if (type == 'CDS') {return 10;} return 6;  }"
+      },
+      "type": "CanvasFeatures",
+      "category": "Genes/Curated Genes",
+      "unsafeMouseover": true,
+      "storeClass": "JBrowse/Store/SeqFeature/NCList",
+      "trackType": "CanvasFeatures",
+      "menuTemplate": [
+        { "label": "View details" },
+        { "label": "Zoom to this gene" },
+        { "label": "Highlight this gene" },
+        {
+          "label": "View Sequence",
+          "action": "contentDialog",
+          "content": "function(track,feature){return track.browser.plugins.FeatureSequence.callFxn(track, feature); }",
+          "iconClass": "dijitIconDatabase"
+        }
+      ],
+      "compress": 1,
+      "urlTemplate": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS293/c_remanei_PRJNA577507/tracks/Curated_Genes/{refseq}/trackData.jsonz",
+      "glyph": "{geneGlyph}",
+      "unsafePopup": true,
+      "maxHeight": 3000,
+      "label": "Curated_Genes",
+      "key": "Curated Genes",
+      "maxExportSpan": 50000000,
+      "onClick": {
+        "title": "Feature in WormBase",
+        "action": "iframeDialog",
+        "url": "{simpleGeneURL}",
+        "label": "Right/Control click for more options"
+      },
+      "metadata": {
+        "shortInfo": "Protein-coding gene structures result from the integration of a variety of prediction methods and data sources followed by manual review and revison by WormBase curators. tRNAs are predicted by tRNAscan, and other non-coding RNA transcripts are taken from a variety of literature sources. The purple and blue colors indicate transcripts on the forward and reverse strands respectively. Dark purple areas represent 5' and 3' UTRs of protein-coding transcripts, assigned automatically using the extents of overlapping ESTs and full-length cDNAs. The UTR predictions have not been reviewed by WormBase curators, and some are known to contain artifacts. Grey transcripts represent either non-coding transcripts of protein coding genes or transcripts of non-coding genes."
+      }
+    },
+    {
+      "storeClass": "RegexSequenceSearch/Store/SeqFeature/RegexSearch",
+      "key": "SpCas9 NGG PAM sites",
+      "metadata": {
+        "shortInfo": "Streptococcus pyogenes Cas9 PAM sites based on NGG motif. Computed on the fly at load time."
+      },
+      "searchParams": {
+        "caseIgnore": true,
+        "regex": true,
+        "fwdStrand": true,
+        "expr": ".GG",
+        "revStrand": true
+      },
+      "type": "CanvasFeatures",
+      "unsafePopup": true,
+      "urlTemplate": null,
+      "category": "Externally Sourced Resources/CRISPR predictions",
+      "unsafeMouseover": true,
+      "label": "SpCas9 NGG PAM sites",
+      "style": { "height": 5, "color": "RebeccaPurple" }
+    },
+    {
+      "type": "CanvasFeatures",
+      "searchParams": {
+        "revStrand": true,
+        "caseIgnore": true,
+        "regex": true,
+        "fwdStrand": true,
+        "expr": "..G[AG][AG]T"
+      },
+      "style": { "height": 5, "color": "DarkViolet" },
+      "label": "SaCas9 NNGRRT PAM sites",
+      "category": "Externally Sourced Resources/CRISPR predictions",
+      "unsafeMouseover": true,
+      "urlTemplate": null,
+      "unsafePopup": true,
+      "storeClass": "RegexSequenceSearch/Store/SeqFeature/RegexSearch",
+      "metadata": {
+        "shortInfo": "Staphylococcus aureus Cas9 PAM sites based on NNGRRT motif. Computed on the fly at load time."
+      },
+      "key": "SaCas9 NNGRRT PAM sites"
+    },
+    {
+      "category": "Externally Sourced Resources/CRISPR predictions",
+      "unsafeMouseover": true,
+      "urlTemplate": null,
+      "unsafePopup": true,
+      "style": { "height": 5, "color": "Indigo" },
+      "label": "Cas12a TTN PAM sites",
+      "searchParams": {
+        "regex": true,
+        "caseIgnore": true,
+        "expr": "TT.",
+        "fwdStrand": true,
+        "revStrand": true
+      },
+      "type": "CanvasFeatures",
+      "metadata": {
+        "shortInfo": "Cas12a (Cpf1) PAM sites based on TTN motif. Computed on the fly at load time."
+      },
+      "key": "Cas12a TTN PAM sites",
+      "storeClass": "RegexSequenceSearch/Store/SeqFeature/RegexSearch"
+    },
+    {
+      "metadata": {
+        "shortInfo": "Cas12e (CasX) PAM sites based on TTCN motif. Computed on the fly at load time."
+      },
+      "key": "Cas12e TTCN PAM sites",
+      "storeClass": "RegexSequenceSearch/Store/SeqFeature/RegexSearch",
+      "style": { "color": "SlateBlue", "height": 5 },
+      "label": "Cas12e TTCN PAM sites",
+      "urlTemplate": null,
+      "category": "Externally Sourced Resources/CRISPR predictions",
+      "unsafeMouseover": true,
+      "unsafePopup": true,
+      "type": "CanvasFeatures",
+      "searchParams": {
+        "regex": true,
+        "caseIgnore": true,
+        "expr": "TTC.",
+        "fwdStrand": true,
+        "revStrand": true
+      }
+    }
+  ],
+  "dataset_id": "c_remanei_PRJNA577507",
+  "plugins": { "FeatureSequence": { "location": "./plugins/FeatureSequence" } },
+  "include": ["../functions.conf"],
+  "names": {
+    "type": "Hash",
+    "url": "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS293/c_remanei_PRJNA577507/names/"
+  }
+}
